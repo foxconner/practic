@@ -6,10 +6,16 @@
 
 #wrapper {
 	max-width: 1577px;
+	margin: 0 auto;
+
 }
 
-.wrap-h {
-	display: inline-block;
+.wrap-header {
+	display: flex;
+	flex-flow: row wrap;
+}
+.our-text {
+	float: left;
 	width: 60%;
 	padding: 108px 0px 0 0;
 }
@@ -19,28 +25,41 @@ header {
 	height: 688px;
 }
 
-.wrap-h h1 {
-	font-size: 57px;
+.our-text > h1 {
+	font-size: 3.5em;
 	text-transform: uppercase;
 	font-weight: 800;
 	margin-bottom: 10px;
 	letter-spacing: 5px;
 }
 
-.wrap-v {
-	display: inline-block;
+.our-text > p {
+	padding-right: 18.75em;
+}
+
+.video img{
+	padding-top: 108px;
 	width: 40%;
 }
 p {
-	font-size: 13px;
+	font-size: 1em;
 	color: #494848;
+	line-height: 2;
 }
 
 nav {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	/*flex-direction:;*/
+	justify-content: center;
+	align-items: center;
   background-color: #332f30;
-  /*height: 12.936%;*/
+  height: 12.936%;
   max-width: 1249px;
-  text-align: center;
+  /*text-align: center;*/
   /*padding: 0 22.7013% 0 22.7013%;*/
 }
 
@@ -53,8 +72,9 @@ nav li {
 	text-decoration: none;
 	text-transform: uppercase;
 	display: inline-block;
-	font-size: 14px;
+	font-size: .875em;
 	font-weight: 700;
+	/*align-self: center;*/
 	width: 85px;
 	height: 48px;
 	text-align: center;
@@ -64,6 +84,16 @@ nav li {
 
 nav li:hover {
 	background-color: #ff4043;
+}
+
+@media screen and (max-width: 640px) {
+	nav > ul{
+		display: none;
+	}
+	nav > p:before {
+		content: open-quote;
+	}
+
 }
 
 main {
