@@ -1,0 +1,27 @@
+@import reset
+
+body
+	max-width: 1577px
+	margin: 0 auto
+	font-family: 'Open Sans', sans-serif
+
+@import header
+
+p 
+	font-size: 1em
+	color: #494848
+	line-height: 2
+
+a 	
+  text-decoration: none
+  color: #e0e0e0
+
+$status-colors: (primary: #000, success: #27BA6C, info: #03a9f4, warning: #FF8833, danger: #ff1a1a);
+
+.message 
+
+  @each $status, $color in $status-colors 
+
+    &-#{$status} 
+
+      background: $color
