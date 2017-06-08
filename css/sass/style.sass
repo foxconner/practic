@@ -1,11 +1,11 @@
-@import reset
+@import "reset"
 
 body
 	max-width: 1577px
 	margin: 0 auto
 	font-family: 'Open Sans', sans-serif
 
-@import header
+@import "header"
 
 p 
 	font-size: 1em
@@ -16,12 +16,12 @@ a
   text-decoration: none
   color: #e0e0e0
 
-$status-colors: (primary: #000, success: #27BA6C, info: #03a9f4, warning: #FF8833, danger: #ff1a1a);
+// $status-colors: (primary: #000, success: #27BA6C, info: #03a9f4, warning: #FF8833, danger: #ff1a1a);
 
-.message 
+// .message 
 
-  @each $status, $color in $status-colors 
+//   @each $status, $color in $status-colors 
 
-    &-#{$status} 
+//     &-#{$status} 
 
-      background: $color
+//       background: $color

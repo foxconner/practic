@@ -4,25 +4,57 @@ header
 	// min-height: 688px
 	display: flex
 	flex-direction: column
-
-@media screen and (max-width: 1351px) 
-	header 
+	@media screen and (max-width: 1351px) 
 		padding: 2% 5% 0 5%
+	@media screen and (max-width: 800px)
+		padding: 0
 nav 
-	display: flex
-	// flex-direction: row
-	justify-content: center
+	[type="checkbox"]
+		display: none
+
+	label.slide-menu
+		background-color: #332f30
+		padding: 18px 0 18px 45px
+		display: none
+		color: #e0e0e0
+		text-transform: uppercase
+		font-weight: 700
+		cursor: pointer
+		position: relative
+		@media screen and (max-width: 800px)
+			display: block
+		span
+			font-size: 1.5em
+			font-weight: 700
+			position: absolute
+			top: 13px
+			left: 17px
+	// display: flex
+	// // flex-direction: row
+	// justify-content: center
 	//align-items: center
-	background-color: #332f30
-	height: 89px
-	max-width: 1249px
+	
 	//text-align: center
 	//padding: 0 22.7013% 0 22.7013%
-
+	@media screen and (max-width: 800px)
+		overflow: hidden
+	ul 
+		background-color: #332f30
+		height: 89px
+		max-width: 1249px
+		display: flex
+		justify-content: center
+		@media screen and (max-width: 800px)
+			display: none
+			height: inherit
+			max-width: 100%
+			
 	li 
 		list-style-type: none
 		display: inline-flex
 		align-items: center
+		@media screen and (max-width: 800px)
+			display: block
 		a
 			text-transform: uppercase
 			display: block
@@ -34,16 +66,20 @@ nav
 			text-align: center
 			padding: 41px 37px 0 37px
 			cursor: pointer
+			@media screen and (max-width: 800px)
+				padding: 20px 0 17px 0
+				height: inherit
+
 
 			&:hover
 				background-color: #ff4043
 
-@media screen and (max-width: 650px)
-	nav > ul
-		display: none
-	
-	nav > p:before 
-		content: "Menu ☰"
+input.slide-menu:checked + label.slide-menu
+	background: #ff4043
+	border-bottom: solid 1px #332f30
+
+input.slide-menu:checked ~ ul
+	display: block
 
 .wrap-header 
 	display: flex	
@@ -60,17 +96,14 @@ nav
 	//float: left
 	width: 48%
 	padding-top: 89px
-
-@media screen and (max-width: 1351px) 
-	.our-text 
+	@media screen and (max-width: 1351px) 
 		width: 48%
 		padding: 0 0 5% 0
 		text-align: center
-
-@media screen and (max-width: 1060px)
-	.our-text
+	@media screen and (max-width: 1060px)
 		width: 90%
-
+	@media screen and (max-width: 800px)
+		padding-bottom: 40px
 
 .our-text > h1 
 	font-size: 3.5em
@@ -79,16 +112,14 @@ nav
 	margin-bottom: 10px
 	letter-spacing: 5px
 	word-wrap: break-word
-
-@media screen and (max-width: 1200px)
-	.our-text > h1
+	@media screen and (max-width: 1200px)
 		font-size: 3em
+	@media screen and (max-width: 1200px)
+		font-size: 2em
 
 .our-text > p 
 	padding-right: 100px
-
-@media screen and (max-width: 1351px) 
-	.our-text > p 
+	@media screen and (max-width: 1351px) 
 		padding: 0 10px
 	
 
@@ -119,11 +150,11 @@ nav
 
 @media screen and (max-width: 1351px)
 	.video img
-		padding: 5% 0
+		padding: 40px 0 35px 0
 		width: 100%
 	
 	.video
 		width: 70%
-@media screen and (max-width: 650px)
+@media screen and (max-width: 800px)
 	.video
-		width: 90%
+		width: 100%
