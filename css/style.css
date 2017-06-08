@@ -88,9 +88,13 @@ nav ul {
 
 @media screen and (max-width: 800px) {
   nav ul {
-    display: none;
+    display: block;
+    max-height: 0;
     height: inherit;
     max-width: 100%;
+    -webkit-transition: max-heigh 0.3s;
+    -o-transition: max-heigh 0.3s;
+    transition: max-heigh 0.3s;
   }
 }
 
@@ -141,6 +145,10 @@ input.slide-menu:checked + label.slide-menu {
 
 input.slide-menu:checked ~ ul {
   display: block;
+  max-height: 5000px;
+  -webkit-transition: max-height 2s ease-in;
+  -o-transition: max-height 2s ease-in;
+  transition: max-height 2s ease-in;
 }
 
 .wrap-header {
@@ -208,7 +216,7 @@ input.slide-menu:checked ~ ul {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
   .our-text > h1 {
     font-size: 2em;
   }
