@@ -1,22 +1,24 @@
 @import "reset"
 
+@import "fontello"
+
 body
 	max-width: 1577px
 	margin: 0 auto
 	font-family: 'Open Sans', sans-serif
 
-@import "header"
-
-@import "skills"
-
-p 
-	font-size: 1em
-	color: #494848
-	line-height: 2
-
 a 	
   text-decoration: none
   color: #e0e0e0
+
+button 
+	border: none
+	&:focus
+		outline: none
+
+@import "header"
+
+@import "skills"
 
 // $status-colors: (primary: #000, success: #27BA6C, info: #03a9f4, warning: #FF8833, danger: #ff1a1a);
 
