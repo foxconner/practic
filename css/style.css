@@ -241,11 +241,11 @@ nav li a {
 }
 
 nav li a:hover {
-  background-color: #ff4043;
+  background-color: #ff2d2d;
 }
 
 input.slide-menu:checked + label.slide-menu {
-  background: #ff4043;
+  background: #ff2d2d;
   border-bottom: solid 1px #332f30;
 }
 
@@ -625,7 +625,7 @@ input.slide-menu:checked ~ ul {
 }
 
 input.features-menu:checked + label.features-menu {
-  color: #ff4043;
+  color: #ff2d2d;
 }
 
 .f-text {
