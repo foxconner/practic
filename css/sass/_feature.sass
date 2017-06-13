@@ -20,6 +20,8 @@
 		display: inline-flex
 		width: 100%
 		justify-content: center
+		@media screen and (max-width: 775px)
+			display: none
 		li
 			list-style-type: none
 			label.features-menu 
@@ -31,9 +33,10 @@
 				font-size: 22px
 				font-weight: 600
 				margin: 80px 58px 60px 0
-@media screen and (max-width: 1225px)
-	ul
-		justify-content: space-around
+				@media screen and (max-width: 1225px)
+					font-size: 20px
+				@media screen and (max-width: 1150px)
+					font-size: 18px
 
 // 	input.features-menu + label.features-menu
 // 		margin: 80px 0 60px 0
@@ -45,6 +48,10 @@ input.features-menu:checked + label.features-menu
 	text-align: center
 	width: 465px
 	margin: 0 auto
+	@media screen and (max-width: 775px)
+		margin-bottom: 50px
+	@media screen and (max-width: 605px)
+		width: auto
 
 .gallery
 	display: flex
